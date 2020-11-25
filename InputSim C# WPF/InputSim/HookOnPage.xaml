@@ -1,0 +1,34 @@
+﻿<Page x:Class="InputSim.HookOnPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:InputSim"
+      mc:Ignorable="d" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+     d:DesignHeight="530" d:DesignWidth="880"
+      Title="HookOnPgae">
+
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <materialDesign:PackIcon Kind="Hook" Width="60" Height="60"  HorizontalAlignment="Center"></materialDesign:PackIcon>
+            <TextBlock HorizontalAlignment="Center" Margin="5" FontSize="22">Hook On</TextBlock>
+
+            <TextBlock Opacity="0.4" Width="540" TextWrapping="Wrap">The input hook is set. Every valid input onwards will be saved. Start performing the InputSet which you want to simulate later on. Click the unhook button when you're done.</TextBlock>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+                <TextBlock VerticalAlignment="Center" FontWeight="SemiBold" Opacity="0.8">Input Count :</TextBlock>
+                <TextBlock Name="CountTxt" Margin="8 0 0 0" VerticalAlignment="Center" FontWeight="SemiBold" Opacity="0.8">0</TextBlock>
+            </StackPanel>
+
+            <Button Name="UnHookBtn" Click="UnHookBtn_Click" HorizontalAlignment="Center" Width="200" Margin="12">Unhook</Button>
+        </StackPanel>
+    </Grid>
+</Page>
