@@ -111,10 +111,10 @@ namespace InputSim
             RightDownCheck.IsChecked = true;
             RightUpCheck.IsChecked = true;
 
-            RightDownCheck.IsEnabled = false;
-            RightUpCheck.IsEnabled = false;
-            LeftDownCheck.IsEnabled = false;
-            LeftUpCheck.IsEnabled = false;
+            RightDownCheck.IsEnabled = true;
+            RightUpCheck.IsEnabled = true;
+            LeftDownCheck.IsEnabled = true;
+            LeftUpCheck.IsEnabled = true;
         }
 
         private void MovementCheck_Unchecked(object sender, RoutedEventArgs e)

@@ -124,6 +124,7 @@ namespace InputSim
                 }
             }
 
+            TempCustomData.InputIndex = (uint)AllInputs.Count()+1;
 
             AllInputs.Add(TempCustomData);
             TempCustomData = new InputData();
@@ -194,6 +195,7 @@ namespace InputSim
 
         private async void StartSimBtn_Click(object sender, RoutedEventArgs e)
         {
+
             // perform the inputset
             InputClass ic = new InputClass();
             await ic.SendInputSet(AllInputs, 0);

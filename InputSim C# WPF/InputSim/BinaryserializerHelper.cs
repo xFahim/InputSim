@@ -60,6 +60,8 @@ namespace InputSim
 
                 BinaryFormatter bf = new BinaryFormatter();
                 obj = bf.Deserialize(fs);
+
+                fs.Close();
             }
 
             return obj;

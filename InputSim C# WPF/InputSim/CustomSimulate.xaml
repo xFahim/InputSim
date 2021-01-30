@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:InputSim"
       mc:Ignorable="d" 
-       d:DesignHeight="530" d:DesignWidth="880"
+       d:DesignHeight="530" d:DesignWidth="998"
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
@@ -29,18 +29,22 @@
                 <TextBlock FontWeight="SemiBold" Opacity="0.4" VerticalAlignment="Bottom">Inputs to be performed :</TextBlock>
                
             </Grid>
-            <ListView Name="HdataListView" Width="868" Height="200" Margin="0 0 0 0" ItemsSource="{Binding AllInputs,Mode=TwoWay}">
+            <ListView Name="HdataListView"  Height="200" Margin="4" ItemsSource="{Binding AllInputs,Mode=TwoWay}">
 
                 <ListView.View>
                     <GridView AllowsColumnReorder="true"
               ColumnHeaderToolTip="Input Set">
 
                         <GridViewColumn DisplayMemberBinding=
+                          "{Binding Path=InputIndex}" 
+                      Header="Index" Width="68"/>
+
+                        <GridViewColumn DisplayMemberBinding=
                           "{Binding Path=HookTypeName}" 
-                      Header="Input Type" Width="110"/>
+                      Header="Input Type" Width="100"/>
 
                         <GridViewColumn 
-                      Header="Time Span (ms)" Width="140">
+                      Header="Delay (ms)" Width="95">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
                                     <TextBox BorderThickness="0" Text="{Binding Path=Timespan, Mode=TwoWay}"></TextBox>
@@ -50,7 +54,7 @@
 
                         <GridViewColumn DisplayMemberBinding=
                           "{Binding Path=MouseEventName}" 
-                      Width="150" Header="Mouse Event">
+                      Width="125" Header="Mouse Event">
                         </GridViewColumn>
 
                         <GridViewColumn DisplayMemberBinding=
@@ -67,7 +71,16 @@
 
                         <GridViewColumn DisplayMemberBinding=
                           "{Binding Path=KeyboardEventName}" 
-                      Header="Keyboard Event" Width="150"/>
+                      Header="Keyboard Event" Width="125"/>
+
+                        <GridViewColumn 
+                      Header="Repeat" Width="74">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBox BorderThickness="0" Text="{Binding Path=RepeatSingular, Mode=TwoWay}"></TextBox>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
 
                     </GridView>
                 </ListView.View>

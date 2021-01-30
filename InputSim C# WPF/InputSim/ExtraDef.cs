@@ -48,6 +48,9 @@ namespace InputSim
     {
         public string HookTypeName { get; set; }
         public long Timespan { get; set; }
+        public ushort RepeatSingular { get; set; } = 0;
+        public uint InputIndex { get; set; }
+
 
 
         /// <summary>

@@ -11,79 +11,91 @@ namespace InputSim.Input
 {
     public class InputClass
     {
-        public async         Task
-SendInputSet(List<InputData> _InpData, int r)
+        public async Task SendInputSet(List<InputData> _InpData, int repeat)
         {
-            for (int c = 0; c <= r; c++)
+            // Repetition for complete InputSet
+            for (int c = 0; c <= repeat; c++)
             {
+                if (HelperInputClass.ContinueSimProcess == false)
+                    break;
+
                 foreach (InputData i in _InpData)
                 {
-                    //mouse input
-                    if (i.HookTypeIndex == 0)
+                    if (HelperInputClass.ContinueSimProcess == false)
+                        break;
+
+                    // Repetition for individual process
+                    for (int j = 0; j <= i.RepeatSingular; j++)
                     {
-
-                        await Task.Delay((int)i.Timespan);
-                        switch (i.MouseEventIndex)
+                        //mouse input
+                        if (i.HookTypeIndex == 0)
                         {
-                            case 0: // 0 MouseEventName -> Left Button Down
-                                SendSingleMouseInput(MOUSEEVENTF.LeftButtonDown | MOUSEEVENTF.MOVE | MOUSEEVENTF.ABSOLUTE, i.MousePointX, i.MousePointY);
-                                break;
-                            case 1: // 1 MouseEventName -> Left Button Up
-                                SendSingleMouseInput(MOUSEEVENTF.LeftButtonUp | MOUSEEVENTF.MOVE | MOUSEEVENTF.ABSOLUTE, i.MousePointX, i.MousePointY);
-                                break;
-                            case 2: // 2 MouseEventName -> Left Button Double Click
-                                SendDoubleClick(MOUSEEVENTF.LeftButtonDown | MOUSEEVENTF.MOVE | MOUSEEVENTF.ABSOLUTE, MOUSEEVENTF.LeftButtonUp | MOUSEEVENTF.MOVE | MOUSEEVENTF.ABSOLUTE, i.MousePointX, i.MousePointY);
-                                break;
-                            case 3: // 3 MouseEventName -> Middle Button Double Click
-                                SendDoubleClick(MOUSEEVENTF.MiddleButtonDown | MOUSEEVENTF.MOVE | MOUSEEVENTF.ABSOLUTE, MOUSEEVENTF.MiddleButtonUp | MOUSEEVENTF.MOVE | MOUSEEVENTF.ABSOLUTE, i.MousePointX, i.MousePointY);
-                                break;
-                            case 4: // 4 MouseEventName -> Middle Button Down
-                                SendSingleMouseInput(MOUSEEVENTF.MiddleButtonDown | MOUSEEVENTF.MOVE | MOUSEEVENTF.ABSOLUTE, i.MousePointX, i.MousePointY);
-                                break;
-                            case 5: // 5 MouseEventName -> Middle Button Up
-                                SendSingleMouseInput(MOUSEEVENTF.MiddleButtonUp | MOUSEEVENTF.MOVE | MOUSEEVENTF.ABSOLUTE, i.MousePointX, i.MousePointY);
-                                break;
-                            case 6: // 6 MouseEventName -> Right Button Down
-                                SendSingleMouseInput(MOUSEEVENTF.RightButtonDown | MOUSEEVENTF.MOVE | MOUSEEVENTF.ABSOLUTE, i.MousePointX, i.MousePointY);
-                                break;
-                            case 7: // 7 MouseEventName -> Right Button Up
-                                SendSingleMouseInput(MOUSEEVENTF.RightButtonUp | MOUSEEVENTF.MOVE | MOUSEEVENTF.ABSOLUTE, i.MousePointX, i.MousePointY);
-                                break;
-                            case 8: // 8 MouseEventName -> Right Button Double Click
-                                SendDoubleClick(MOUSEEVENTF.RightButtonDown | MOUSEEVENTF.MOVE | MOUSEEVENTF.ABSOLUTE, MOUSEEVENTF.RightButtonUp | MOUSEEVENTF.ABSOLUTE, i.MousePointX, i.MousePointY);
-                                break;
-                            case 9: // 9 MouseEventName -> MouseWheel
-                                SendMouseWheel(i.WheelDelta,i.MousePointX,i.MousePointY);
-                                break;
-                            case 10: // 10 MouseEventName -> Cursor Movement
-                                MoveMouse(i.MousePointX, i.MousePointY);
-                                break;
-                            case 11: // 11 MouseEventName -> Left Click
-                                SendClick(MOUSEEVENTF.LeftButtonDown | MOUSEEVENTF.MOVE | MOUSEEVENTF.ABSOLUTE, MOUSEEVENTF.LeftButtonUp | MOUSEEVENTF.ABSOLUTE, i.MousePointX, i.MousePointY);
-                                break;
-                            case 12: // 10 MouseEventName -> Right Click
-                                SendClick(MOUSEEVENTF.RightButtonDown | MOUSEEVENTF.MOVE | MOUSEEVENTF.ABSOLUTE, MOUSEEVENTF.RightButtonUp | MOUSEEVENTF.ABSOLUTE, i.MousePointX, i.MousePointY);
-                                break;
+
+                            await Task.Delay((int)i.Timespan);
+                            switch (i.MouseEventIndex)
+                            {
+                                case 0: // 0 MouseEventName -> Left Button Down
+                                    SendSingleMouseInput(MOUSEEVENTF.LeftButtonDown | MOUSEEVENTF.MOVE | MOUSEEVENTF.ABSOLUTE, i.MousePointX, i.MousePointY);
+                                    break;
+                                case 1: // 1 MouseEventName -> Left Button Up
+                                    SendSingleMouseInput(MOUSEEVENTF.LeftButtonUp | MOUSEEVENTF.MOVE | MOUSEEVENTF.ABSOLUTE, i.MousePointX, i.MousePointY);
+                                    break;
+                                case 2: // 2 MouseEventName -> Left Button Double Click
+                                    SendDoubleClick(MOUSEEVENTF.LeftButtonDown | MOUSEEVENTF.MOVE | MOUSEEVENTF.ABSOLUTE, MOUSEEVENTF.LeftButtonUp | MOUSEEVENTF.MOVE | MOUSEEVENTF.ABSOLUTE, i.MousePointX, i.MousePointY);
+                                    break;
+                                case 3: // 3 MouseEventName -> Middle Button Double Click
+                                    SendDoubleClick(MOUSEEVENTF.MiddleButtonDown | MOUSEEVENTF.MOVE | MOUSEEVENTF.ABSOLUTE, MOUSEEVENTF.MiddleButtonUp | MOUSEEVENTF.MOVE | MOUSEEVENTF.ABSOLUTE, i.MousePointX, i.MousePointY);
+                                    break;
+                                case 4: // 4 MouseEventName -> Middle Button Down
+                                    SendSingleMouseInput(MOUSEEVENTF.MiddleButtonDown | MOUSEEVENTF.MOVE | MOUSEEVENTF.ABSOLUTE, i.MousePointX, i.MousePointY);
+                                    break;
+                                case 5: // 5 MouseEventName -> Middle Button Up
+                                    SendSingleMouseInput(MOUSEEVENTF.MiddleButtonUp | MOUSEEVENTF.MOVE | MOUSEEVENTF.ABSOLUTE, i.MousePointX, i.MousePointY);
+                                    break;
+                                case 6: // 6 MouseEventName -> Right Button Down
+                                    SendSingleMouseInput(MOUSEEVENTF.RightButtonDown | MOUSEEVENTF.MOVE | MOUSEEVENTF.ABSOLUTE, i.MousePointX, i.MousePointY);
+                                    break;
+                                case 7: // 7 MouseEventName -> Right Button Up
+                                    SendSingleMouseInput(MOUSEEVENTF.RightButtonUp | MOUSEEVENTF.MOVE | MOUSEEVENTF.ABSOLUTE, i.MousePointX, i.MousePointY);
+                                    break;
+                                case 8: // 8 MouseEventName -> Right Button Double Click
+                                    SendDoubleClick(MOUSEEVENTF.RightButtonDown | MOUSEEVENTF.MOVE | MOUSEEVENTF.ABSOLUTE, MOUSEEVENTF.RightButtonUp | MOUSEEVENTF.ABSOLUTE, i.MousePointX, i.MousePointY);
+                                    break;
+                                case 9: // 9 MouseEventName -> MouseWheel
+                                    SendMouseWheel(i.WheelDelta, i.MousePointX, i.MousePointY);
+                                    break;
+                                case 10: // 10 MouseEventName -> Cursor Movement
+                                    MoveMouse(i.MousePointX, i.MousePointY);
+                                    break;
+                                case 11: // 11 MouseEventName -> Left Click
+                                    SendClick(MOUSEEVENTF.LeftButtonDown | MOUSEEVENTF.MOVE | MOUSEEVENTF.ABSOLUTE, MOUSEEVENTF.LeftButtonUp | MOUSEEVENTF.ABSOLUTE, i.MousePointX, i.MousePointY);
+                                    break;
+                                case 12: // 10 MouseEventName -> Right Click
+                                    SendClick(MOUSEEVENTF.RightButtonDown | MOUSEEVENTF.MOVE | MOUSEEVENTF.ABSOLUTE, MOUSEEVENTF.RightButtonUp | MOUSEEVENTF.ABSOLUTE, i.MousePointX, i.MousePointY);
+                                    break;
+                            }
+
+
                         }
-
-
-                    }
-                    else if (i.HookTypeIndex == 1) //keyboard- input
-                    {
-                        await Task.Delay((int)i.Timespan);
-                        switch (i.KeyBoardEventIndex)
+                        else if (i.HookTypeIndex == 1) //keyboard- input
                         {
-                            case 0: // 0 KeyBoardEventName -> Key Down
-                                SendKeyboardInput(false,i.ScanCode,0);
-                                break;
-                            case 1: // 0 KeyBoardEventName -> Key Up
-                                SendKeyboardInput(false, i.ScanCode,1);
-                                break;
-                            case 2: // 0 KeyBoardEventName -> Key Press
-                                SendKeyboardInput(false, i.ScanCode,2);
-                                break;
+                            await Task.Delay((int)i.Timespan);
+                            switch (i.KeyBoardEventIndex)
+                            {
+                                case 0: // 0 KeyBoardEventName -> Key Down
+                                    SendKeyboardInput(false, i.ScanCode, 0);
+                                    break;
+                                case 1: // 0 KeyBoardEventName -> Key Up
+                                    SendKeyboardInput(false, i.ScanCode, 1);
+                                    break;
+                                case 2: // 0 KeyBoardEventName -> Key Press
+                                    SendKeyboardInput(false, i.ScanCode, 2);
+                                    break;
+                            }
                         }
                     }
+
+                    
                     
                 }
             }

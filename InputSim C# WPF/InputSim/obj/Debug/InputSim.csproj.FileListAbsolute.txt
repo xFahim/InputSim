@@ -38,3 +38,43 @@ C:\Users\Lenovo\source\repos\InputSim\InputSim\obj\Debug\AboutPage.g.cs
 C:\Users\Lenovo\source\repos\InputSim\InputSim\obj\Debug\HelperPage.g.cs
 C:\Users\Lenovo\source\repos\InputSim\InputSim\obj\Debug\AboutPage.baml
 C:\Users\Lenovo\source\repos\InputSim\InputSim\obj\Debug\HelperPage.baml
+C:\Users\Lenovo\Documents\GitHub\InputSim\InputSim C# WPF\InputSim\bin\Debug\InputSim.exe.config
+C:\Users\Lenovo\Documents\GitHub\InputSim\InputSim C# WPF\InputSim\bin\Debug\InputSim.exe
+C:\Users\Lenovo\Documents\GitHub\InputSim\InputSim C# WPF\InputSim\bin\Debug\InputSim.pdb
+C:\Users\Lenovo\Documents\GitHub\InputSim\InputSim C# WPF\InputSim\bin\Debug\MaterialDesignColors.dll
+C:\Users\Lenovo\Documents\GitHub\InputSim\InputSim C# WPF\InputSim\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Lenovo\Documents\GitHub\InputSim\InputSim C# WPF\InputSim\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Lenovo\Documents\GitHub\InputSim\InputSim C# WPF\InputSim\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Lenovo\Documents\GitHub\InputSim\InputSim C# WPF\InputSim\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Lenovo\Documents\GitHub\InputSim\InputSim C# WPF\InputSim\obj\Debug\InputSim.csprojAssemblyReference.cache
+C:\Users\Lenovo\Documents\GitHub\InputSim\InputSim C# WPF\InputSim\obj\Debug\AboutPage.g.cs
+C:\Users\Lenovo\Documents\GitHub\InputSim\InputSim C# WPF\InputSim\obj\Debug\CustomSimulate.g.cs
+C:\Users\Lenovo\Documents\GitHub\InputSim\InputSim C# WPF\InputSim\obj\Debug\HelperPage.g.cs
+C:\Users\Lenovo\Documents\GitHub\InputSim\InputSim C# WPF\InputSim\obj\Debug\Home.g.cs
+C:\Users\Lenovo\Documents\GitHub\InputSim\InputSim C# WPF\InputSim\obj\Debug\HookOnPage.g.cs
+C:\Users\Lenovo\Documents\GitHub\InputSim\InputSim C# WPF\InputSim\obj\Debug\HookSavePage.g.cs
+C:\Users\Lenovo\Documents\GitHub\InputSim\InputSim C# WPF\InputSim\obj\Debug\InputSetViewEdit.g.cs
+C:\Users\Lenovo\Documents\GitHub\InputSim\InputSim C# WPF\InputSim\obj\Debug\MainWindow.g.cs
+C:\Users\Lenovo\Documents\GitHub\InputSim\InputSim C# WPF\InputSim\obj\Debug\Recordpage.g.cs
+C:\Users\Lenovo\Documents\GitHub\InputSim\InputSim C# WPF\InputSim\obj\Debug\SimulateOnPage.g.cs
+C:\Users\Lenovo\Documents\GitHub\InputSim\InputSim C# WPF\InputSim\obj\Debug\App.g.cs
+C:\Users\Lenovo\Documents\GitHub\InputSim\InputSim C# WPF\InputSim\obj\Debug\InputSim_MarkupCompile.cache
+C:\Users\Lenovo\Documents\GitHub\InputSim\InputSim C# WPF\InputSim\obj\Debug\InputSim_MarkupCompile.lref
+C:\Users\Lenovo\Documents\GitHub\InputSim\InputSim C# WPF\InputSim\obj\Debug\App.baml
+C:\Users\Lenovo\Documents\GitHub\InputSim\InputSim C# WPF\InputSim\obj\Debug\AboutPage.baml
+C:\Users\Lenovo\Documents\GitHub\InputSim\InputSim C# WPF\InputSim\obj\Debug\CustomSimulate.baml
+C:\Users\Lenovo\Documents\GitHub\InputSim\InputSim C# WPF\InputSim\obj\Debug\HelperPage.baml
+C:\Users\Lenovo\Documents\GitHub\InputSim\InputSim C# WPF\InputSim\obj\Debug\Home.baml
+C:\Users\Lenovo\Documents\GitHub\InputSim\InputSim C# WPF\InputSim\obj\Debug\HookOnPage.baml
+C:\Users\Lenovo\Documents\GitHub\InputSim\InputSim C# WPF\InputSim\obj\Debug\HookSavePage.baml
+C:\Users\Lenovo\Documents\GitHub\InputSim\InputSim C# WPF\InputSim\obj\Debug\InputSetViewEdit.baml
+C:\Users\Lenovo\Documents\GitHub\InputSim\InputSim C# WPF\InputSim\obj\Debug\MainWindow.baml
+C:\Users\Lenovo\Documents\GitHub\InputSim\InputSim C# WPF\InputSim\obj\Debug\Recordpage.baml
+C:\Users\Lenovo\Documents\GitHub\InputSim\InputSim C# WPF\InputSim\obj\Debug\SimulateOnPage.baml
+C:\Users\Lenovo\Documents\GitHub\InputSim\InputSim C# WPF\InputSim\obj\Debug\InputSim.g.resources
+C:\Users\Lenovo\Documents\GitHub\InputSim\InputSim C# WPF\InputSim\obj\Debug\InputSim.Properties.Resources.resources
+C:\Users\Lenovo\Documents\GitHub\InputSim\InputSim C# WPF\InputSim\obj\Debug\InputSim.csproj.GenerateResource.cache
+C:\Users\Lenovo\Documents\GitHub\InputSim\InputSim C# WPF\InputSim\obj\Debug\InputSim.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Documents\GitHub\InputSim\InputSim C# WPF\InputSim\obj\Debug\InputSim.csproj.CopyComplete
+C:\Users\Lenovo\Documents\GitHub\InputSim\InputSim C# WPF\InputSim\obj\Debug\InputSim.exe
+C:\Users\Lenovo\Documents\GitHub\InputSim\InputSim C# WPF\InputSim\obj\Debug\InputSim.pdb

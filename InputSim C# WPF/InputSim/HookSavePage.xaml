@@ -26,18 +26,18 @@
                 </StackPanel>
             </Button>
             
-            <ListView Name="HdataListView" Width="868" Height="240" Margin="0 10 0 0" ItemsSource="{Binding }">
+            <ListView Name="HdataListView" Width="858" Height="240" Margin="0 10 0 0" ItemsSource="{Binding }">
 
                 <ListView.View>
                     <GridView AllowsColumnReorder="true"
               ColumnHeaderToolTip="Input Set">
 
                         <GridViewColumn DisplayMemberBinding=
-                          "{Binding Path=HookTypeName}" 
-                      Header="Input Type" Width="110"/>
+                          "{Binding Path=InputIndex}" 
+                      Header="Index" Width="68"/>
 
                         <GridViewColumn 
-                      Header="Time Span (ms)" Width="140">
+                      Header="Delay (ms)" Width="95">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
                                     <TextBox BorderThickness="0" Text="{Binding Path=Timespan, Mode=TwoWay}"></TextBox>
@@ -47,7 +47,7 @@
 
                         <GridViewColumn DisplayMemberBinding=
                           "{Binding Path=MouseEventName}" 
-                      Width="150" Header="Mouse Event">
+                      Width="124" Header="Mouse Event">
                         </GridViewColumn>
 
                         <GridViewColumn DisplayMemberBinding=
@@ -64,7 +64,16 @@
 
                         <GridViewColumn DisplayMemberBinding=
                           "{Binding Path=KeyboardEventName}" 
-                      Header="Keyboard Event" Width="150"/>
+                      Header="Keyboard Event" Width="125"/>
+
+                        <GridViewColumn 
+                      Header="Repeat" Width="74">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBox BorderThickness="0" Text="{Binding Path=RepeatSingular, Mode=TwoWay}"></TextBox>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
 
                     </GridView>
                 </ListView.View>

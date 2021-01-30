@@ -55,6 +55,8 @@ namespace InputSim
         // Helper Method 
         private async void CallBackHelper(KBDLLHOOKSTRUCT k)
         {
+
+
             foreach (InputSetData d in _INPSETLIST)
             {
                 if ((uint)d.AsignedKeySC == k.scanCode && IsSimulationOnProcess == false)
@@ -64,6 +66,7 @@ namespace InputSim
 
                     // perform the inputset
                     InputClass ic = new InputClass();
+                    HelperInputClass.ContinueSimProcess = true;
                     await ic.SendInputSet(d.HookedDataList, d.Repeat);
 
                     IsSimulationOnProcess = false;
@@ -71,7 +74,8 @@ namespace InputSim
                 }
                 else if (IsSimulationOnProcess == true && k.scanCode == (uint)ScanCodeKey.sc_escape)
                 {
-                    // work on it/ break simulation on Esc press
+                    HelperInputClass.ContinueSimProcess = false;
+                    MessageBox.Show("Simulation process terminated");
                 }
             }
         }

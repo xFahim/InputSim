@@ -88,6 +88,7 @@
       <DependentUpon>InputSetViewEdit.xaml</DependentUpon>
     </Compile>
     <Compile Include="Input\EnumExtraInput.cs" />
+    <Compile Include="Input\HelperInputClass.cs" />
     <Compile Include="Input\InputClass.cs" />
     <Compile Include="Recordpage.xaml.cs">
       <DependentUpon>Recordpage.xaml</DependentUpon>

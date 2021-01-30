@@ -68,7 +68,7 @@
                             -->
                             
                             
-                            <CheckBox Name="WheelCheck" Grid.Row="3" Grid.Column="0" IsEnabled="False"  Margin="0 2 0 0">Mouse Wheel</CheckBox>
+                            <CheckBox Name="WheelCheck" Grid.Row="3" Grid.Column="0" IsEnabled="True"  Margin="0 2 0 0">Mouse Wheel</CheckBox>
                             <CheckBox Name="MovementCheck" Grid.Row="3" Grid.Column="1" Checked="MovementCheck_Checked" Unchecked="MovementCheck_Unchecked" IsEnabled="True" Margin="0 2 0 0">Mouse Movement</CheckBox>
 
                             <CheckBox Name="MidUpCheck" Grid.Row="4" Grid.Column="0"  Margin="0 2 0 0">Mid Button Up</CheckBox>
